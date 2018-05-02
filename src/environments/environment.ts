@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAhHSMmIdESr48hMPQDzJzo7u1JTXzm-j4',
+    authDomain: 'taxicloud-eaec6.firebaseapp.com',
+    databaseURL: 'https://taxicloud-eaec6.firebaseio.com',
+    projectId: 'taxicloud-eaec6',
+    storageBucket: 'taxicloud-eaec6.appspot.com',
+    messagingSenderId: '103258168982'
+  }
 };

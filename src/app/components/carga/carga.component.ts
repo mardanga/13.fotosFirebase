@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FileItem } from '../../models/fileItem';
+import { CargarImagenService } from '../../services/cargar-imagen.service';
 
 @Component({
   selector: 'app-carga',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargaComponent implements OnInit {
 
-  constructor() { }
+  archivos: FileItem[] = [];
+  estaSobreDrop = false;
+
+  constructor(public  _ci: CargarImagenService) { }
 
   ngOnInit() {
+  }
+
+  subirImagenes() {
+    this._ci.cargarImagenes(this.archivos);
+  }
+
+  prueba(evento) {
+    console.log(evento);
   }
 
 }
